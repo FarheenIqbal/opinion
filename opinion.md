@@ -9,7 +9,7 @@ Since the user can enter any kind of data, we need a method to validate that dat
 ## React
 
 React is a JavaScript library for building UI components.
-Each component is a function that returns custom, reusable HTML elements and handles data using state and props. We can maintain state using hooks. We need to register event handlers for the specific events and write handler functions to handle events and change state accordingly.
+Each component is a function that returns HTML elements and handles data using state and props. We can maintain state using hooks. We need to register event handlers for the specific events and write handler functions to handle events and change state accordingly.
 
 It is much more organized and structured than using just HTML,CSS and JS.
 I am very comfortable in writing applications in React. I understand different aspects of it clearly.
@@ -24,11 +24,11 @@ In most basic form, we use Route , Link and Switch elements and many hooks are a
 
 It is still just React with added features.
 
-  - Next.js can pre-render pages, which are static, at build time, instead of at client-side. Pre-rendering can result in faster page display and SEO.
+  - Next.js can pre-render pages, which are static, at build time, instead of at client-side. Pre-rendering can result in faster page display and SEO. It uses getStaticProps() and getStaticPaths(). We can also use incremental static generation by using fallback:true, if we have too many static pages to generate at build time, otherwise build time will be more. 
 
     I think if we build it on client side, it will be slow because first JS will load then execute and then page is displayed, so searches will not be able to show our page in results as its content is not yet available.
 
-  - We use Static Generation for static pages and use Server-side Rendering for others.
+  - We use for Server-side Rendering for pages that need to be rendered for each request. It uses getServerSideProps()
 
   - We can also use client side rendering for frequently updating data. Static parts of the page can be pre-rendered using static generation and then fetch the data on the client side and display it.
   We can show **"loading state" or "skeleton"** while page loads.We can use React hook for data fetching called **SWR** to update cache and display updated data to the user, otherwise updated data is not shown immediately on the page until we refresh the page. This is a big problem while using async/await database CRUD operations
